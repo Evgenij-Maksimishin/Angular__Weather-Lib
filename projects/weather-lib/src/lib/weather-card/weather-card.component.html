@@ -1,0 +1,30 @@
+<section class="weather-forecast">
+
+    <ul class="nav">
+        <li class="nav-item" *ngFor="let menuList of menuList">
+            <a class="nav-link" (click)="chooseType(menuList)" [ngClass]="{'active': selectedList === menuList}">
+                {{menuList.toUpperCase()}}
+            </a>
+        </li>
+    </ul>
+
+    <div class="weather-cards__section">
+        <div class="weather-cards">
+            <div *ngFor='let weather of weatherData' class="weather-card">
+                <div class="weather-day">{{weather.date | date: 'EEEE, d'}}</div>
+                <div class="weather-month">{{weather.date | date: 'MMMM'}}</div>
+                <div class="weather-temperature">{{weather.temperature}}°</div>
+                <div class="weather-weatherType">
+                    <i class="fas" [ngClass]="selectIcon(weather.weatherType)"></i>
+                </div>
+                <div class="weather-humidity">Humidity: {{weather.humidity}}%</div>
+                <div class="weather-wind ">Wind: {{weather.wind}}km/h</div>
+            </div>
+        </div>
+
+        <div class="chooseNextPrevious" *ngIf="selectedList === 'day'">
+            <button [disabled]="isDisabled('previous')" class="btn btn-previous" (click)='chooseDay("previous")'>&#8249;</button>
+            <button [disabled]="isDisabled('next')"  class="btn btn-next" (click)='chooseDay("next")'>&#8250;</button>
+        </div>
+    </div>
+</section>

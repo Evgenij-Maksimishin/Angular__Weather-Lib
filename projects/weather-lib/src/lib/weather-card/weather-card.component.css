@@ -1,0 +1,150 @@
+.weather-forecast {
+    display: block;
+    margin-top: 10px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 5px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.chooseNextPrevious {
+    width: 180px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.weather-cards {
+    display: flex;
+    margin-top: 10px;
+}
+
+.weather-card {
+    display: block;
+    width: 180px;
+    background: lightskyblue;
+    color: white;
+    margin-top: 5px;
+    margin-right: 4px;
+}
+
+.weather-day {
+    margin-top: 7px;
+}
+
+.weather-month {
+    margin-top: 4px;
+}
+
+.weather-temperature {
+    font-size: 45px;
+    line-height: 60px;
+}
+
+.weather-weatherType {
+    text-align: center;
+}
+
+.weather-humidity {
+    margin-top: 12px;
+}
+
+.weather-wind {
+    margin-bottom: 10px;
+}
+
+.weather-wind,
+.weather-humidity,
+.weather-temperature,
+.weather-day,
+.weather-month {
+    text-align: center;
+}
+
+.fa-sun {
+    font-size: 50px;
+    color: yellow;
+}
+
+.fa-cloud {
+    font-size: 50px;
+    color: white;
+}
+
+.fa-snowflake {
+    font-size: 50px;
+    color: white;
+}
+
+.fa-cloud-showers-heavy {
+    font-size: 50px;
+    color: white;
+}
+
+.weather-card__all-days {
+    display: flex;
+}
+
+.nav-link {
+    border-radius: 10px;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #0078aa;
+    color: #0078aa;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    background-color: #0078aa;
+    border: 1px solid #0078aa;
+    color: white;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #0078aa;
+    color: white;
+    border: 1px solid #0078aa;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 13px 21px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ddd;
+}
+
+.btn-previous {
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 50%;
+}
+
+.btn-next {
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 50%;
+}
+
+.btn-previous:disabled,
+.btn-next:disabled {
+    background: gray;
+}
